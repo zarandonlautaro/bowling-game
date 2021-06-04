@@ -8,10 +8,28 @@ namespace Tests
 {
     public class BowlingModelShould
     {
-        [Test]
-        public void BowlingShouldSimplePasses()
+
+        [SetUp]
+        public void SetUpBowlingModel()
         {
+
+        }
+
+
+        BowlingModel bowlingModel;
+        public void CreateModel()
+        {
+            bowlingModel = new BowlingModel();
+        }
+
+        [Test]
+        public void BowlingGeneralScoreWithoutStrikesAndSpares()
+        {
+            CreateModel();
             Assert.True(true);
         }
+
     }
+
+
 }

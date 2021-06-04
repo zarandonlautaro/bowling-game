@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IBowlingView
 {
-    void SetScore();
+    void SetScore(ScoreData data);
     void Throw();
 }

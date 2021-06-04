@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BowlingPresenter : IBowlingView
 {
-    public void SetScore()
+    public void SetScore(ScoreData data)
     {
 
     }

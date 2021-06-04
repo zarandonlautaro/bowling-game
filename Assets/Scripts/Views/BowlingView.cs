@@ -10,7 +10,7 @@ public class BowlingView : MonoBehaviour
     
     }
 
-    public void SetScore()
+    public void SetScore(ScoreData data)
     {
 
     }
