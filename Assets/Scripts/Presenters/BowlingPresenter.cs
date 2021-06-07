@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlingPresenter : IBowlingView
+[System.Serializable]
+public class BowlingPresenter 
 {
-    public void SetScore(ScoreData data)
-    {
+    IBowlingView view;
+    public BowlingModel bowlingModel;
 
+    public BowlingPresenter(IBowlingView view) {
+        bowlingModel = new BowlingModel();
+        this.view = view;
     }
-    public void Throw() 
-    {
-    
+  
+    public void Simulate() {
+
+        bowlingModel.Simulate();
+
+        view.SetScores(bowlingModel.player1.GetScores(), bowlingModel.player2.GetScores());
+        view.SetScoreTotal(bowlingModel.GetTotalScore(bowlingModel.player1), bowlingModel.GetTotalScore(bowlingModel.player2));
     }
 }

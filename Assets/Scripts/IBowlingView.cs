@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IBowlingView
 {
-    void SetScore(ScoreData data);
-    void Throw();
+    void SetScores(int[,] scorePlayer1, int[,] scorePlayer2);
+    void SetScoreTotal(int totalP1, int totalP2);
 }
